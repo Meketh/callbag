@@ -1,0 +1,25 @@
+{
+  "name": "meketh-callbag",
+  "version": "0.0.4",
+  "description": "Just a playtest callbag lib",
+  "repository": "github:Meketh/callbag",
+  "author": "Nahuel Santoalla <nahjersan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha --reporter nyan",
+    "build": "babel src --out-dir dist --ignore **/*.test.js,**/*.spec.js",
+    "postbuild": "cp ./package.json dist",
+    "preupload": "npm run build",
+    "upload": "yarn version && yarn publish dist"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-rc.0",
+    "@babel/core": "^7.0.0-beta.56",
+    "@babel/plugin-proposal-pipeline-operator": "^7.0.0-rc.0",
+    "@babel/preset-env": "^7.0.0-beta.56",
+    "@babel/register": "^7.0.0-beta.56",
+    "babel-plugin-root-import": "^6.1.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
